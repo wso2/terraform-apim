@@ -1,0 +1,63 @@
+{
+  "variables": {
+    "azure-subscription-id": "*********************",
+    "azure-client-id": "*********************",
+    "azure-client-secret": "*********************",
+    "azure-tenant-id": "*********************",
+    "azure-resource-group": "WSO2-installers",
+    "azure-region": "East US",
+    "vm-size": "Standard_A1_v2",
+    "storage-account": "wso2installer",
+    "ssh_username": "centos",
+    "ssh_password": "password"
+  },
+  "builders": [
+    {
+      "type": "azure-arm",
+      "client_id": "{{user `azure-client-id`}}",
+      "client_secret": "{{user `azure-client-secret`}}",
+      "subscription_id": "{{user `azure-subscription-id`}}",
+      "tenant_id": "{{user `azure-tenant-id`}}",
+      "managed_image_resource_group_name": "{{user `azure-resource-group`}}",
+      "managed_image_name": "packer-wso2apim-{{ isotime \"2006-01-02-1504\" }}",
+      "os_type": "linux",
+      "image_publisher": "OpenLogic",
+      "image_offer": "CentOS",
+      "image_sku": "7.5",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_password": "{{user `ssh_password`}}",
+      "ssh_pty": "true",
+      "azure_tags": {
+        "dept": "engineering"
+      },
+      "location": "{{user `azure-region`}}",
+      "vm_size": "{{user `vm-size`}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "./scripts",
+      "destination": "/tmp"
+    },
+    {
+      "type": "file",
+      "source": "./dbscripts",
+      "destination": "/tmp"
+    },
+    {
+      "type": "file",
+      "source": "./ansible-apim",
+      "destination": "/tmp"
+    },
+    {
+      "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -S -E sh '{{ .Path }}'",
+      "inline": [
+          "bash /tmp/scripts/init.sh",
+          "/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync"],
+      "inline_shebang": "/bin/sh -x",
+      "type": "shell",
+      "skip_clean": true
+    }
+  ]
+}
