@@ -1,0 +1,12 @@
+{
+  "azure-subscription-id": "*********************",
+  "azure-client-id": "*********************",
+  "azure-client-secret": "*********************",
+  "azure-tenant-id": "*********************",
+
+  "azure-resource-group": "WSO2-installers",
+  "azure-region": "East US",
+
+  "vm-size": "Standard_A1_v2",
+  "storage-account" : "wso2installer"
+}
