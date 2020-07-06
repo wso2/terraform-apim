@@ -10,9 +10,3 @@ Terraform Files
 - output.tf
     included loab-balancer Public ip address to be needed to configure as host entry for access the APIM web console.
 
-
-
-Please follow the documentation [1] for more information.
-
-[1] https://docs.google.com/a/wso2.com/document/d/1imXDoWZHbTAyNVE8uTD6UEsTiUi9h-Yp216HxCbJRzI/edit?usp=sharing
-
