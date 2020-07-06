@@ -1,3 +1,4 @@
+
 Included Packer configurations scripts to create the API Manager Azure machine image. Later this builds Packer image is been referred by the Terraform scripts for provision for API Manager 2 node setup.
 Azure subscription details are included in "variables.json".
 
@@ -16,8 +17,4 @@ Packer Directories and Files
 - Vagrantfile
     contained relavant vagrant configurations for test the Ansible playbook changes in locally
 
-
-Please follow the documentation [1] for more information.
-
-[1] https://docs.google.com/a/wso2.com/document/d/1imXDoWZHbTAyNVE8uTD6UEsTiUi9h-Yp216HxCbJRzI/edit?usp=sharing
 
