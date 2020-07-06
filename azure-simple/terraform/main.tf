@@ -167,7 +167,7 @@ resource "azurerm_virtual_machine" "wso2_bastion" {
   }
 
   os_profile {
-    computer_name  = "bastion"
+    computer_name  = "wso2-bastion"
     admin_username = var.admin_username
     admin_password = var.admin_password
     custom_data    = base64encode(data.template_file.bastion_tempalte_script.rendered)
@@ -200,6 +200,7 @@ resource "azurerm_storage_share" "wso2_storage_share" {
 }
 
 // APIM loadbalacer resources
+
 resource "azurerm_public_ip" "wso2_loadbalacer_pip" {
   depends_on          = ["azurerm_virtual_machine_scale_set.wso2_scale_set"]
   name                = "wso2apim-pip"
