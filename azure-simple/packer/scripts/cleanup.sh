@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #----------------------------------------------------------------------------
-#  Copyright (c) 2018 WSO2, Inc. http://www.wso2.org
+#  Copyright (c) 2020 WSO2, Inc. http://www.wso2.org
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -23,5 +23,3 @@ yum -y clean all
 find /var/log -type f | while read f; do echo -ne '' > $f; done;
 
 # remove under tmp directory
-#rm -rf /tmp/*
-

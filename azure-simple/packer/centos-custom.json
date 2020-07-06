@@ -6,7 +6,7 @@
     "azure-tenant-id": "*********************",
     "azure-resource-group": "WSO2-installers",
     "azure-region": "East US",
-    "vm-size": "Standard_A1_v2",
+    "vm-size": "Standard_DS1_v2",
     "storage-account": "wso2installer",
     "ssh_username": "centos",
     "ssh_password": "password"
@@ -27,7 +27,7 @@
       "ssh_password": "{{user `ssh_password`}}",
       "ssh_pty": "true",
       "azure_tags": {
-        "dept": "engineering"
+        "dept": "wso2product"
       },
       "location": "{{user `azure-region`}}",
       "vm_size": "{{user `vm-size`}}"
