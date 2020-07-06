@@ -1,6 +1,6 @@
-# Contributing to ansible-apim
+# Contributing to terraform-apim
 
-Ansible resources for WSO2 API Manager are open source, and we encourage contributions from our community.
+Terraform-apim resources for WSO2 API Manager are open source, and we encourage contributions from our community.
 
 ## How you can Contribute
 
@@ -10,7 +10,7 @@ The recommended way to discuss anything related to WSO2 products is via our mail
 * architecture@wso2.org: To discuss the architecture of WSO2 products.
 
 ### Posting Issues
-We encourage you to report any problems in the WSO2 Ansible resources or their documentation by creating GitHub issues in the respective repositories. The [issues page](https://github.com/wso2/ansible-apim/issues) on GitHub is for tracking bugs and feature requests. When posing a new issue, follow the guidelines below.
+We encourage you to report any problems in the WSO2 Terraform resources or their documentation by creating GitHub issues in the respective repositories. The [issues page](https://github.com/wso2/terraform-apim/issues) on GitHub is for tracking bugs and feature requests. When posing a new issue, follow the guidelines below.
 * Check whether the issue has already been reported.
 * Create a separate issue for each bug you are reporting or feature you are requesting.
 
@@ -26,8 +26,8 @@ Please follow these guidelines when contributing to the code:
 4. Before you send out the pull request, sync your forked repository with a remote repository. This makes your pull request simple and clear.
 
 ```bash
-git clone https://github.com/<user>/ansible-apim.git
-git remote add upstream https://github.com/wso2/ansible-apim.git
+git clone https://github.com/<user>/terraform-apim.git
+git remote add upstream https://github.com/wso2/terraform-apim.git
 git fetch upstream
 git checkout -b <topic-branch> upstream/3.1.x
 

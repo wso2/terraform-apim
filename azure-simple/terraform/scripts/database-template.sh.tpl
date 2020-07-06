@@ -49,4 +49,3 @@ USE apim_db;
 SOURCE $DB_HOME/mysql-apim.sql
 
 EOF
-
