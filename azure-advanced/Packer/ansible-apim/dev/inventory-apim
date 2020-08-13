@@ -1,0 +1,2 @@
+[apim]
+HOST ansible_host=localhost ansible_user=centos ansible_connection=local
