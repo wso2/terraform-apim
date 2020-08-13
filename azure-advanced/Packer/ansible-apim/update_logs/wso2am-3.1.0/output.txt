@@ -1,1 +1,0 @@
-./scripts/update.sh: line 153: ./update_linux: cannot execute binary file
