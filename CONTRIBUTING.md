@@ -37,5 +37,4 @@ git push origin <topic-branch>
 # submit pull request
 
 ```
-
 Thanks for contributing!
